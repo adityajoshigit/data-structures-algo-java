@@ -1,3 +1,5 @@
+package com.competitiveprogramming;
+
 import java.util.Scanner;
 
 
