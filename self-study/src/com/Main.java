@@ -1,4 +1,4 @@
-package com.javabasics;
+package com;
 
 import com.javabasics.userinput.UserInput;
 
