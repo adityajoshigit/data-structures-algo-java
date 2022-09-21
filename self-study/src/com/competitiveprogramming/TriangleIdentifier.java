@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * @author aditya
@@ -37,6 +34,9 @@ public class TriangleIdentifier {
 
 	
 	public int findTriangles(int[] arr) {
+		if (arr.length < 3) {
+			return 0;
+		}
 		// 9 2 8 8 2 7 8 3 6 6 5 8 9 4 2 1
 		
 		
