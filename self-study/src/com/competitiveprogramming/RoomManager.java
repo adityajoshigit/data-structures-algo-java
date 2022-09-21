@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 /**
@@ -44,15 +45,27 @@ import java.util.stream.Collectors;
  *
  */
 public class RoomManager {
-	public static String assignRoom(int numOfRooms, String demandedRoomNumbersStr) {
-//		List<Integer> assignedRoomNumbers = new ArrayList<Integer>();
+	
+//	public static void main(String[] args) {
+//		Scanner s = new Scanner(System.in);
+//		String strNum = s.nextLine();
+//		String demandedRoomNumbersStr = s.nextLine();
+//		int numOfRooms = Integer.parseInt(strNum);
+//		ArrayList<Integer> l = Arrays.asList(demandedRoomNumbersStr.split(" "))
+//				.stream()
+//				.map(n -> Integer.valueOf(n))
+//				.collect(Collectors.toCollection(ArrayList::new));
 //		
-		Map<Boolean, ArrayList<Integer>> mapOfAvailability = new HashMap<Boolean, ArrayList<Integer>>();
-		ArrayList<Integer> l = Arrays.asList(demandedRoomNumbersStr.split(" "))
-		.stream()
-		.map(n -> Integer.valueOf(n))
-		.collect(Collectors.toCollection(ArrayList::new));
+//		RoomManager m = new RoomManager();
+//		System.out.println(m.assignRoom(numOfRooms, l));
+//	}
+	
+	public String assignRoom(int numOfRooms, ArrayList<Integer> l) {
+		if(numOfRooms == 0) {
+			return "";
+		} 
 		
+		Map<Boolean, ArrayList<Integer>> mapOfAvailability = new HashMap<Boolean, ArrayList<Integer>>();
 		mapOfAvailability.put(
 				true, 
 				l
@@ -74,7 +87,7 @@ public class RoomManager {
 					break;
 				}
 				foundAt +=1;
-				System.out.println(foundAt);
+//				System.out.println(foundAt);
 				available = mapAvail.get(foundAt);
 			}
 			if(foundAt != -999) {
@@ -83,7 +96,7 @@ public class RoomManager {
 			}
 			
 		}
-		System.out.println(a);
+//		System.out.println(a);
 		
 		return a.trim();
 		
