@@ -42,10 +42,12 @@ public class ScoreCalculator {
 	public int calculateScore(int[] nums, int[] multipliers) {
 		int score = 0;
 		int mLen = multipliers.length;
-		int i = 1;
+		int i = 0;
 		
 		while (i <= (mLen - 1)) {
-			System.out.println("Something");
+			int multiplier = multipliers[i];
+			
+			i++;
 		}
 		
 		return score;
