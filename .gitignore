@@ -2,3 +2,10 @@
 .git/*
 .metadata/*
 data-structures-algo-java.iml
+self-study/bin/*
+self-study/.classpath
+self-study/.project
+.project
+.classpath
+../.project
+../.classpath
